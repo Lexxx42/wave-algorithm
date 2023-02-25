@@ -1,4 +1,4 @@
-# wave-argirithm
+# wave-algorithm
 
 ## Реализация волнового алгоритма
 
