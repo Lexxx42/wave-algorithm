@@ -6,5 +6,6 @@ public class Main {
         WaveAlgorithm.colorize(table);
         tableForPrint = PrintTable.getMap(table);
         PrintTable.printMap(tableForPrint);
+        System.out.println(PrintPretty.printBlockMap(table));
     }
 }

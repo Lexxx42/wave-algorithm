@@ -1,10 +1,9 @@
-import java.awt.*;
-import java.util.Arrays;
 import java.util.IntSummaryStatistics;
+import java.util.Arrays;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
-public class printPretty {
+public class PrintPretty {
 
     public static void main(String[] args) {
         int[][] testMaze = {
@@ -29,7 +28,6 @@ public class printPretty {
     public static String printBlockMap(int[][] arr){
         StringBuilder blocs_map_str = new StringBuilder(arr.length);
         int gradient_max = find2DMaxStream(arr);
-        //int gradient_max = find2DMaxLoop(arr); // немного медленнее
 
         for (int[] row:arr){
             for (int cell: row){
@@ -55,13 +53,14 @@ public class printPretty {
                     }
                 }
             }
+
             blocs_map_str.append("\n");
         }
 
         return blocs_map_str.toString();
     }
 
-    public static int[][] showPath(int[][] arr, String path_str){
+    public static int[][] showPath(int[][] arr, String path_str) {
         String[] coords = path_str.split(",");
         if (coords.length == 0){ return arr;}
 
@@ -115,8 +114,9 @@ public class printPretty {
         arr [next_pair[1]][next_pair[0]]= - 2;// и последним элементом вернем выход
         return arr;
     }
- // статистические встроенные методы полсе JAVA 8. Работают со Stream
-    public static int find2DMaxStream(int[][] arr){
+
+    // статистические встроенные методы полсе JAVA 8. Работают со Stream
+    public static int find2DMaxStream(int[][] arr) {
         IntSummaryStatistics stats = Stream.of(arr)
                 .flatMapToInt(IntStream::of)
                 .summaryStatistics();
