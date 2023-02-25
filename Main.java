@@ -4,6 +4,7 @@ public class Main {
         String tableForPrint = PrintTable.getMap(table);
         PrintTable.printMap(tableForPrint);
         WaveAlgorithm.colorize(table);
+        tableForPrint = PrintTable.getMap(table);
         PrintTable.printMap(tableForPrint);
     }
 }
