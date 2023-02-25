@@ -1,3 +1,6 @@
+import java.util.LinkedList;
+import java.util.Queue;
+
 public class WaveAlgorithm {
     public static void colorize(int[][] map) {
         boolean broke = false;

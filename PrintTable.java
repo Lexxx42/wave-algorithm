@@ -17,7 +17,7 @@ public class PrintTable {
         return result.toString();
     }
 
-    public static void printArray(String array) {
+    public static void printMap(String array) {
         MyLogger.writeLog(array);
     }
 }
