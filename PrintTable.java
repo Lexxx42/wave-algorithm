@@ -4,7 +4,6 @@ public class PrintTable {
     }
 
     public static String getMap(int[][] map) {
-        //return Arrays.deepToString(map);
         StringBuilder result = new StringBuilder();
         result.append('\n');
         for (int[] arr : map) {

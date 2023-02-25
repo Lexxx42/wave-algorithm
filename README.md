@@ -29,7 +29,7 @@ String printMap(int[][])
 + 2.3 сторонний сервис (api)
 
 3. Печать карты в терминал красиво - Антон
-String printPretty(int[][])
+String PrintPretty(int[][])
 
 4. Раскраска карты - Сергей
 void colorize(int[][] map)
