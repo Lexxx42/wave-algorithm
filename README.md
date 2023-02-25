@@ -33,3 +33,5 @@ void colorize(int[][] map)
 + 4.2 выходы
 
 5. Поиск выхода
+
+![image info](./img/Screenshot_2023-02-19_113306.png)
