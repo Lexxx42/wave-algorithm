@@ -19,19 +19,19 @@ public class WaveAlgorithm {
         }
         while (queue.size() > 0) {
             int[] tile = queue.remove();
-            if (map[tile[0] + 1][tile[1]] == 0 | map[tile[0] + 1][tile[1]] == -2) {
+            if (map[tile[0] + 1][tile[1]] == 0 || map[tile[0] + 1][tile[1]] == -2) {
                 map[tile[0] + 1][tile[1]] = map[tile[0]][tile[1]] + 1;
                 queue.add(new int[]{tile[0] + 1, tile[1]});
             }
-            if (map[tile[0]][tile[1] + 1] == 0 | map[tile[0]][tile[1] + 1] == -2) {
+            if (map[tile[0]][tile[1] + 1] == 0 || map[tile[0]][tile[1] + 1] == -2) {
                 map[tile[0]][tile[1] + 1] = map[tile[0]][tile[1]] + 1;
                 queue.add(new int[]{tile[0], tile[1] + 1});
             }
-            if (map[tile[0] - 1][tile[1]] == 0 | map[tile[0] - 1][tile[1]] == -2) {
+            if (map[tile[0] - 1][tile[1]] == 0 || map[tile[0] - 1][tile[1]] == -2) {
                 map[tile[0] - 1][tile[1]] = map[tile[0]][tile[1]] + 1;
                 queue.add(new int[]{tile[0] - 1, tile[1]});
             }
-            if (map[tile[0]][tile[1] - 1] == 0 | map[tile[0]][tile[1] - 1] == -2) {
+            if (map[tile[0]][tile[1] - 1] == 0 || map[tile[0]][tile[1] - 1] == -2) {
                 map[tile[0]][tile[1] - 1] = map[tile[0]][tile[1]] + 1;
                 queue.add(new int[]{tile[0], tile[1] - 1});
             }
