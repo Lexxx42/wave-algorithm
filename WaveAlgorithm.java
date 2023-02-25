@@ -1,5 +1,5 @@
 public class WaveAlgorithm {
-    private static void colorize(int[][] map) {
+    public static void colorize(int[][] map) {
         boolean broke = false;
         Queue<int[]> queue = new LinkedList<>();
         for (int row = 0; row < map.length; row++) {
