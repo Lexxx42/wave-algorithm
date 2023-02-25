@@ -29,7 +29,7 @@ String printMap(int[][])
 + 2.3 сторонний сервис (api)
 
 3. Печать карты в терминал красиво - Антон
-Void printPretty(int[][])
+String printPretty(int[][])
 
 4. Раскраска карты - Сергей
 void colorize(int[][] map)
@@ -39,7 +39,7 @@ void colorize(int[][] map)
 + int[][] findExits()
 
 5. Поиск кратчайшего пути к выходу - Роман
-String PrintWay(int[][] map, String exit)
+int[][] getShortWay(int[][] map, String exit)
 
 | -1 | -1 | -1 | -1 | -1 | -1 |
 |----|----|----|----|----|----|
