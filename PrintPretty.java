@@ -8,10 +8,10 @@ public class PrintPretty {
     public static void main(String[] args) {
         int[][] testMaze = {
                 {-1, -1, -1, -1, -1, -1},
-                {-1, -2, 30, 25, 20, -1},
-                {-1, -1, -1, -1, 15, -1},
-                {-1, 2, 3, 11, 12, -1},
-                {-1, 1, 2, 3, 11, -1},
+                {-1, -2, 9, 8, 7,  -1},
+                {-1, -1, -1, -1, 6, -1},
+                {-1, 2, 3, 4, 5, -1},
+                {-1, 1, 2, 3, 4, -1},
                 {-1, -1, -1, -1, -1, -1}};
 
 //        System.out.println(PrintTable.getMap(GenerateTable.STATIC_MAP));
@@ -62,7 +62,7 @@ public class PrintPretty {
 
     public static int[][] showPath(int[][] arr, String path_str) {
         String[] coords = path_str.split(",");
-        if (coords.length == 0){ return arr;}
+        if (coords.length < 3){ return arr;}
 
         int[] next_pair = new int[2];
         int[] curr_pair =new int[2];
