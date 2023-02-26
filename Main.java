@@ -8,5 +8,10 @@ public class Main {
         start.placeStart(maze.map);
         tableForPrint = PrintTable.getMap(maze.map);
         PrintTable.printMap(tableForPrint);
+
+        Point2D exit = new Point2D(1, 1);
+        exit.placeExit(maze.map);
+        tableForPrint = PrintTable.getMap(maze.map);
+        PrintTable.printMap(tableForPrint);
     }
 }

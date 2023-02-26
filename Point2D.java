@@ -13,4 +13,7 @@ public class Point2D {
     public void placeStart(int[][] map) {
         map[y][x] = 1;
     }
+    public void placeExit(int[][] map) {
+        map[y][x] = -2;
+    }
 }
