@@ -11,6 +11,6 @@ public class Point2D {
      * @param y - y coordinate
      */
     public void placeStart(int[][] map) {
-        map[x,y] = 1;
+        map[y][x] = 1;
     }
 }
