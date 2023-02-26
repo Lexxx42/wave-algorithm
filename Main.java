@@ -15,4 +15,3 @@ public class Main {
         PrintTable.printMap(tableForPrint);
     }
 }
-int a = 2;
