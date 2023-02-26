@@ -4,7 +4,27 @@ import java.util.stream.Stream;
 
 public class PrintPretty {
 
-    public static String printBlockMap(int[][] arr) {
+    public static void main(String[] args) {
+        int[][] testMaze = {
+                {-1, -1, -1, -1, -1, -1},
+                {-1, -2, 9, 8, 7,  -1},
+                {-1, -1, -1, -1, 6, -1},
+                {-1, 2, 3, 4, 5, -1},
+                {-1, 1, 2, 3, 4, -1},
+                {-1, -1, -1, -1, -1, -1}};
+
+//        System.out.println(PrintTable.getMap(GenerateTable.STATIC_MAP));
+//        PrintTable.printMap(PrintTable.getMap(GenerateTable.STATIC_MAP));
+        System.out.println(printBlockMap(testMaze));
+        String testPath = "1:4,1:3,2:3,3:3,4:3,4:2,4:1,3:1,2:1,1:1";
+        testMaze = showPath(testMaze,testPath);
+        System.out.println(printBlockMap(testMaze));
+
+    }
+
+
+
+    public static String printBlockMap(int[][] arr){
         StringBuilder blocs_map_str = new StringBuilder(arr.length);
         int gradient_max = find2DMaxStream(arr);
 
@@ -41,9 +61,7 @@ public class PrintPretty {
 
     public static int[][] showPath(int[][] arr, String path_str) {
         String[] coords = path_str.split(",");
-        if (coords.length == 0) {
-            return arr;
-        }
+        if (coords.length < 3){ return arr;}
 
         int[] next_pair = new int[2];
         int[] curr_pair = new int[2];
