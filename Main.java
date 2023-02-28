@@ -1,9 +1,7 @@
 public class Main {
     public static void main(String[] args) {
         //int[][] table = GenerateTable.getMap();  // Static Map
-        int[][] table = MapGenerator.generateMaze(13, 13);  // Generated Map
-        table[1][1] = 1;
-        table[9][9] = -2;
+        int[][] table = MapGenerator.generateMaze(13, 13, true, 1);  // Generated Map
         String tableForPrint = PrintTable.getMap(table);
         PrintTable.printMap(tableForPrint);
 
