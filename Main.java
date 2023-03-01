@@ -8,10 +8,11 @@ public class Main {
         tableForPrint = PrintTable.getMap(table);
         PrintTable.printMap(tableForPrint);
 
+        System.out.println("Maze map");
         System.out.println(PrintPretty.printBlockMap(table));
         String testPath = SearchWay.SearchWays(table);
-        System.out.println(testPath);
 
+        System.out.println("Maze path");
         int[][] testMaze1 = PrintPretty.showPath(table, testPath);
         System.out.println(PrintPretty.printBlockMap(testMaze1));
     }
