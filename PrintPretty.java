@@ -93,7 +93,6 @@ public class PrintPretty {
             prev_pair[0] = curr_pair[0];
             prev_pair[1] = curr_pair[1];
         }
-        arr[next_pair[1]][next_pair[0]] = -2;// и последним элементом вернем выход
         return arr;
     }
 
