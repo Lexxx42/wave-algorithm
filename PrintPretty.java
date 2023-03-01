@@ -78,7 +78,7 @@ public class PrintPretty {
                 } else if (curr_pair[0] > next_pair[0]) { // на восток
                     arr[curr_pair[1]][curr_pair[0]] = -7;
                 } else {
-                    arr[curr_pair[1] - 1][curr_pair[0] - 1] = -8;
+                    arr[curr_pair[1]][curr_pair[0]] = -8;
                 } // на запад
 
             } else if (curr_pair[0] == prev_pair[0] && curr_pair[1] < prev_pair[1]) { //пришли с юга
