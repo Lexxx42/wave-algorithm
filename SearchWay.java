@@ -49,7 +49,6 @@ public class SearchWay {
 
             }
         }
-        System.out.println(str);
         return str.deleteCharAt(str.length() - 1).toString();
     }
 }
