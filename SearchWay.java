@@ -9,7 +9,7 @@ public class SearchWay {
                 if (arr[i][j] == -2) {
                     x = i;
                     y = j;
-                    str.append(x + ":" + y + ",");
+                    str.append(y + ":" + x + ",");
                 }
                 if (arr[i][j] > max) {
                     max = arr[i][j];
@@ -23,25 +23,25 @@ public class SearchWay {
                     if (x > 0 && y > 0) {
                         if (arr[x + 1][y] == max) {
                             x = x + 1;
-                            str.append(x + ":" + y + ",");
+                            str.append(y + ":" + x + ",");
                         }
                     }
                     if (x > 0 && y > 0) {
                         if (arr[x - 1][y] == max) {
                             x = x - 1;
-                            str.append(x + ":" + y + ",");
+                            str.append(y + ":" + x + ",");
                         }
                     }
                     if (x > 0 && y > 0) {
                         if (arr[x][y + 1] == max) {
                             y = y + 1;
-                            str.append(x + ":" + y + ",");
+                            str.append(y + ":" + x + ",");
                         }
                     }
                     if (x > 0 && y > 0) {
                         if (arr[x][y - 1] == max) {
                             y = y - 1;
-                            str.append(x + ":" + y + ",");
+                            str.append(y + ":" + x + ",");
                         }
                     }
                     max--;
@@ -49,7 +49,8 @@ public class SearchWay {
 
             }
         }
-        return str.reverse().deleteCharAt(0).toString();
+        System.out.println(str);
+        return str.deleteCharAt(str.length() - 1).toString();
     }
 }
 
