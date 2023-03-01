@@ -4,7 +4,8 @@ import java.util.stream.Stream;
 
 public class PrintPretty {
 
-    public static String printBlockMap(int[][] arr) {
+
+    public static String printBlockMap(int[][] arr){
         StringBuilder blocs_map_str = new StringBuilder(arr.length);
         int gradient_max = find2DMaxStream(arr);
 
@@ -41,9 +42,7 @@ public class PrintPretty {
 
     public static int[][] showPath(int[][] arr, String path_str) {
         String[] coords = path_str.split(",");
-        if (coords.length == 0) {
-            return arr;
-        }
+        if (coords.length < 3){ return arr;}
 
         int[] next_pair = new int[2];
         int[] curr_pair = new int[2];
@@ -60,7 +59,7 @@ public class PrintPretty {
                 } else if (curr_pair[0] > next_pair[0]) { // на восток
                     arr[curr_pair[1]][curr_pair[0]] = -7;
                 } else {
-                    arr[curr_pair[1] - 1][curr_pair[0] - 1] = -8;
+                    arr[curr_pair[1]][curr_pair[0]] = -8;
                 } // на запад
 
             } else if (curr_pair[0] == prev_pair[0] && curr_pair[1] < prev_pair[1]) { //пришли с юга
@@ -94,7 +93,6 @@ public class PrintPretty {
             prev_pair[0] = curr_pair[0];
             prev_pair[1] = curr_pair[1];
         }
-        arr[next_pair[1]][next_pair[0]] = -2;// и последним элементом вернем выход
         return arr;
     }
 
